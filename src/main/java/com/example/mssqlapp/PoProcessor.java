@@ -78,7 +78,7 @@ public class PoProcessor implements CommandLineRunner {
         ObjectMapper mapper = new ObjectMapper();
         TypeReference<List<Object>> typeReference = new TypeReference<List<Object>>() { };
 
-        InputStream inputStream = TypeReference.class.getResourceAsStream("/json/FCM_20220530_143229.json");
+        InputStream inputStream = TypeReference.class.getResourceAsStream("/json/trialPoFile.json");
         List<Object> objects = mapper.readValue(inputStream, typeReference);
         List<CompletableFuture<Object>> resultFutures = new ArrayList<>();
         for (Object object : objects) {
